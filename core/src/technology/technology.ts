@@ -3,5 +3,5 @@ export default interface Technology {
 	name: string;
 	description: string;
 	image: string;
-	enphasis: boolean;
+	emphasis: boolean;
 }

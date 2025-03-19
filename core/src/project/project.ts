@@ -10,6 +10,6 @@ export default interface Project {
 	type: Type;
 	level: Level;
 	repository: string;
-	enphasis: boolean;
+	emphasis: boolean;
 	technologies: Technology[];
 }
