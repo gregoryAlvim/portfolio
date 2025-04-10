@@ -71,7 +71,7 @@ const Services = () => {
 
 							<p className="text-foreground/60 ">{service.description}</p>
 
-							<div className="w-full border-foreground/20 border-b">""</div>
+							<div className="w-full border-foreground/20 border-b">{""}</div>
 						</div>
 					))}
 				</motion.div>
