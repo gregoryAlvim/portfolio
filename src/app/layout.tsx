@@ -1,6 +1,8 @@
 import Header from "@/components/header";
 import PageTransition from "@/components/page-transition";
 import StairTransition from "@/components/stair-transition";
+import { ThemeProvider } from "@/components/theme-provider";
+import { ThemeWrapper } from "@/components/theme-wrapper";
 import "@/css/globals.css";
 import type { Metadata } from "next";
 import { JetBrains_Mono } from "next/font/google";
@@ -22,13 +24,18 @@ interface Props {
 
 export default function RootLayout({ children }: Props) {
 	return (
-		<html lang="pt-BR">
-			<body
-				className={`${jetbrainsMon.variable} dark bg-background antialiased`}
-			>
-				<Header />
-				<StairTransition />
-				<PageTransition>{children}</PageTransition>
+		<html lang="pt-BR" className={jetbrainsMon.variable}>
+			<body>
+				<ThemeProvider
+					defaultTheme="system"
+					enableSystem
+          >
+					<ThemeWrapper>
+						<Header />
+						<StairTransition />
+						<PageTransition>{children}</PageTransition>
+					</ThemeWrapper>
+				</ThemeProvider>
 			</body>
 		</html>
 	);

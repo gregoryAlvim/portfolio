@@ -2,6 +2,7 @@ import Link from "next/link";
 import MobileNav from "./mobile-nav";
 import Nav from "./nav";
 import { Button } from "./ui/button";
+import { ThemeToggle } from "./theme-toggle";
 
 const Header = () => {
 	return (
@@ -18,6 +19,7 @@ const Header = () => {
 					<Link href="/">
 						<Button>Hire me</Button>
 					</Link>
+					<ThemeToggle />
 				</div>
 
 				<div className="xl:hidden">
