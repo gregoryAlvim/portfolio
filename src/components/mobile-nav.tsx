@@ -5,6 +5,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { CiMenuFries } from "react-icons/ci";
 import { links } from "./nav";
+import { ThemeToggle } from "./theme-toggle";
 import { Sheet, SheetContent, SheetTrigger } from "./ui/sheet";
 
 const MobileNav = () => {
@@ -38,6 +39,8 @@ const MobileNav = () => {
 							</Link>
 						))}
 					</nav>
+
+					<ThemeToggle />
 				</SheetContent>
 			</Sheet>
 		</nav>
