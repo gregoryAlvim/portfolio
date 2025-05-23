@@ -13,8 +13,8 @@ const jetbrainsMon = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Gregs",
-  description: "Seu SaaS de planejamento financeiro",
+  title: "Portifólio | Grégory Alvim",
+  description: "Portifólio of Grégory Alvim, Software Developer",
 };
 
 interface Props {
