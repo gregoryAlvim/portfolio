@@ -3,19 +3,21 @@ import Social from "@/components/social";
 import Stats from "@/components/stats";
 import { Button } from "@/components/ui/button";
 import { FiDownload } from "react-icons/fi";
+import { getDictionarie } from "@/dictionaries";
 
-const Home = () => {
+const Home = async ({ params: { locale } }: { params: { locale: string } }) => {
+  const dictionary = await getDictionarie(locale);
   return (
     <section className="h-full">
       <div className="container mx-auto h-full">
         <div className="flex flex-col items-center justify-between xl:flex-row xl:pt-8 xl:pb-24">
           <div className="order-2 text-center xl:order-none xl:text-left">
-            <span className="text-xl">Software Developer</span>
+            <span className="text-xl">{dictionary.home.role}</span>
             <h1 className="h1 mb-6">
-              Hello I'm <br />{" "}
+              {dictionary.home.title} <br />{" "}
               <span className="text-purple-600">Grégory Alvim</span>
             </h1>
-            <p className="mb-9 max-w-[500px]">
+            <p className="mb-9 max-w-[500px]">{dictionary.home.description}
               I excel at crafting elegant digital experiences and I am
               proficient in various programming languages and technologies.
             </p>
@@ -26,7 +28,7 @@ const Home = () => {
                 variant="outline"
                 className="flex items-center gap-2 uppercase"
               >
-                <span>Download CV</span> <FiDownload className="text-xl" />
+                <span>{dictionary.home.button}</span> <FiDownload className="text-xl" />
               </Button>
               <div className="mb-8 xl:mb-0">
                 <Social

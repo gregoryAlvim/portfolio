@@ -16,7 +16,7 @@ const Header = () => {
 
 				<div className="hidden items-center gap-8 xl:flex">
 					<Nav />
-					<Link href="/">
+					<Link href="/home">
 						<Button>Hire me</Button>
 					</Link>
 					<ThemeToggle />
